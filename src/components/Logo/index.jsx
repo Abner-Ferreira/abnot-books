@@ -1,14 +1,24 @@
 import React from 'react';
 import logo from '../../assets/logo.svg'
-import './style.css';
+import styled from 'styled-components';
+
+const LogoContainer = styled.div `
+    display: flex;
+        flex-direction: row;
+        font-size: 30px;
+`
+
+const LogoImg = styled.img `
+    margin-right: 10px;
+`
 
 function Logo() {
     return (
         <>
-            <div className='logo'>
-                <img src={logo} alt='Logo abnot-books' className='logo-img'/>
+            <LogoContainer>
+                <LogoImg src={logo} alt='Logo abnot-books'/>
                 <p><strong>Abnot</strong>Books</p>
-            </div>
+            </LogoContainer>
         </>
     );
 }
